@@ -1,0 +1,32 @@
+{
+  "name": "css-minify",
+  "version": "1.0.0",
+  "description": "a css minify tool",
+  "main":"index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "css-minify": "./bin/css-minify.js"
+  },
+  "keywords": [
+    "css",
+    "minify",
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:purple-force/css-minify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/purple-force/css-minify/issues"
+  },
+  "author": {
+    "name": "purple-force",
+    "email": "1017704437@qq.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^7.1.0"
+  }
+}
