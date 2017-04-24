@@ -2,6 +2,7 @@
 var path=require("path"),
 	fs=require("fs"),
 	minify=require("../lib/minify.js"),
+	dirExistsSync=require("../lib/dirExistsSync.js")
 	resolveFile=require("../lib/resolveFile.js");
 var argv=require("yargs")
 		.usage("Usage: css-minify <options> [value]")
@@ -29,7 +30,10 @@ if(file){
 	return;
 }
 if(dir){
-	fs.mkdirSync(path.join(process.cwd(),"css-dist"));
+	var dirpath=path.join(process.cwd(),"css-dist");
+	if(!dirExistsSync(dirpath)){
+		fs.mkdirSync(dirpath);
+	}
 	fs.readdir(path.join(process.cwd(),dir),function(err,filenames){
 		if(err){
 			console.log(err);
