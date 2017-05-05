@@ -1,6 +1,6 @@
 {
   "name": "css-minify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a css minify tool",
   "main":"index.js",
   "scripts": {
