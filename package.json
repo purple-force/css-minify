@@ -2,7 +2,7 @@
   "name": "css-minify",
   "version": "1.0.1",
   "description": "a css minify tool",
-  "main":"index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
