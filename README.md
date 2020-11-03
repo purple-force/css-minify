@@ -32,10 +32,18 @@ or
 
 `css-minify --dir sourcedir`
 
+And then, if you want to specify output directory, use `-o` or `output` like below(introduced in 1.1.0):
+
+`css-minify -d sourcedir -o distdir`
+
+or
+
+`css-minify --dir sourcedir --output distdir`
+
 **Tips:**
 
 All css source files are in the sourcedir directory
 
-At last,you will see the minified css file,which is ended with `.min.css`,in `current directory /css-dist`.
+At last, you will see the minified css file, which is ended with `.min.css` in directory specified by `-o` or `--output`, which is `css-dist` by default.
 
  
