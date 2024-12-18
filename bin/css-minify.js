@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const { program } = require('commander');
 const resolveFile = require('../lib/resolveFile.js');
+const minify = require('../lib/minify.js');
 
 const version = require('../package.json').version;
 program
@@ -30,6 +31,15 @@ if (dir) {
         resolveFile(path.join(process.cwd(), dir, filename), output);
       }
     });
+  });
+  return;
+}
+if (!process.stdin.isTTY) { // check stdin
+  let input = '';
+  process.stdin.setEncoding('utf8');
+  process.stdin.on('data', chunk => { input += chunk; });
+  process.stdin.on('end', async () => {
+    process.stdout.write(await minify(input));
   });
   return;
 }
