@@ -1,8 +1,10 @@
 # css-minify
 
-### a css-compression command line tool
+### a css-compression tool
 
 ## Install:
+
+### Global:
 
 `yarn global add css-minify`
 
@@ -10,7 +12,17 @@ or
 
 `npm install css-minify -g`
 
+### Local
+
+`yarn add css-minify`
+
+or
+
+`npm install css-minify`
+
 ## Usage:
+
+### CLI
 
 If you want to deal with a single css file,you can do it like this:
 
@@ -19,6 +31,13 @@ If you want to deal with a single css file,you can do it like this:
 or 
 
 `css-minify --file filename`
+
+If no file / dir are specified, check if STDIN has data, and if so, run the minifier and print on STDOUT
+
+```
+> echo "body { color: #ff0000; }" | node bin/css-minify.js
+body{color:red}
+```
 
 **Warning:**
 
